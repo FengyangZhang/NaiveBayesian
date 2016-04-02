@@ -8,7 +8,9 @@ public class Vocabulary {
 		vocabulary = new ArrayList<String>();
 		for(List<String> data:datas){
 			for(String word:data){
-				vocabulary.add(word);
+				if(!vocabulary.contains(word)){//实现并集
+					vocabulary.add(word);
+				}
 			}
 		}
 	}
