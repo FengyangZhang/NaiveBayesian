@@ -65,6 +65,14 @@ public class TrainVector {
 		int p1Den = 2;
 		int p0Den = 2;
 		//ºËÐÄËã·¨
+//		p1Den+=trainDataClass.stream()
+//				.filter(dataClass -> 
+//				dataClass.equals(1))
+//			.count();
+//		p0Den+=trainDataClass.stream()
+//				.filter(dataClass -> 
+//				dataClass.equals(0))
+//			.count();
 		for(int i=0;i<trainDocNum;i++){
 			if(trainDataClass.get(i) == 1){
 				for(int j=0;j<wordsNum;j++){
@@ -74,13 +82,12 @@ public class TrainVector {
 						 .filter(isThereWord ->
 								 isThereWord.equals(1))
 						 .count();
-				System.out.println(p1Den);
+				
 			}
 			else{
 				for(int k=0;k<wordsNum;k++){
 					p0Num[k]+=trainVector.get(i).get(k);
 				}
-
 				p0Den+=trainVector.get(i).stream()
 										 .filter(isThereWord ->
 												 isThereWord.equals(1))
