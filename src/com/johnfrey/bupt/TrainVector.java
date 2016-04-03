@@ -1,6 +1,5 @@
 package com.johnfrey.bupt;
 
-import java.nio.DoubleBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +15,7 @@ public class TrainVector {
 		p1Vec = new ArrayList<>();
 		p0Vec = new ArrayList<>();
 	}
+	
 	//根据词汇表将句子转化为向量
 	public void data2Vector(List<String> vocab,List<String> data){
 		List<Integer> vec = new ArrayList<Integer>();
@@ -51,8 +51,6 @@ public class TrainVector {
 		return vec;
 	}
 	
-	
-	
 	public void train(List<Integer> trainDataClass){
 		int trainDocNum = trainVector.size();
 		int wordsNum = trainVector.get(0).size();
@@ -76,6 +74,7 @@ public class TrainVector {
 						 .filter(isThereWord ->
 								 isThereWord.equals(1))
 						 .count();
+				System.out.println(p1Den);
 			}
 			else{
 				for(int k=0;k<wordsNum;k++){
@@ -106,12 +105,15 @@ public class TrainVector {
 		}
 		p1+=Math.log(pAbusive);
 		p0+=Math.log(1-pAbusive);
+		System.out.println("p0="+p0+"   p1="+p1);
 		if(p0>p1){
-			System.out.println("Benign Words!");
+			System.out.println("Positive Words!");
 		}
-		else System.out.println("Malign Words!");
+		if(p1>p0){ 
+			System.out.println("Negative Words!");
+		}
+		else	System.out.println("Neutral Words");
 	}
-	
 	
 	public int[] laplace(int[] s,int weight){
 		for(int i=0;i<s.length;i++){

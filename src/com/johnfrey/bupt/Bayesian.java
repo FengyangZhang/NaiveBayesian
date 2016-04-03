@@ -18,8 +18,8 @@ public class Bayesian {
 		vectorManager.train(dataManager.getDataClass());
 		List<String> test = new ArrayList<>();
 		List<Integer> testVec = new ArrayList<>();
-		test.add("my");
-		test.add("ass");
+		test.add("");
+		test.add("asshole");
 		testVec = vectorManager.test2Vector(vocabulary.get(), test);
 		vectorManager.judge(testVec);
 	}

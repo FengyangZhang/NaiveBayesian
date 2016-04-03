@@ -5,6 +5,7 @@ import java.util.List;
 public class TrainData {
 	private List<List<String>> trainData;
 	private List<Integer> trainDataClass;
+
 	public void init(){
 		trainData = new ArrayList<List<String>>();
 		trainDataClass = new ArrayList<Integer>();
@@ -17,11 +18,13 @@ public class TrainData {
 		trainDataClass.add(1);
 		trainDataClass.add(0);
 	}
+	
 	public void print(){
 		for(int i = 0;i<trainDataClass.size();i++){
 			System.out.println(trainData.get(i)+trainDataClass.get(i).toString());
 		}
 	}
+	
 	public void addEntry(int dataClass,String... data){
 		trainDataClass.add(dataClass);
 		List<String> mdata = new ArrayList<String>();
@@ -30,9 +33,11 @@ public class TrainData {
 		}
 		trainData.add(mdata);
 	}
+	
 	public List<List<String>> getData(){
 		return trainData;
 	}
+	
 	public List<Integer> getDataClass(){
 		return trainDataClass;
 	}
