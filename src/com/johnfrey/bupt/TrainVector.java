@@ -15,7 +15,7 @@ public class TrainVector {
 		p0Vec = new ArrayList<>();
 	}
 
-	// ¸ù¾Ý´Ê»ã±í½«¾ä×Ó×ª»¯ÎªÏòÁ¿
+	// ï¿½ï¿½ï¿½Ý´Ê»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
 	public void data2Vector(List<String> vocab, List<String> data) {
 		List<Integer> vec = new ArrayList<Integer>();
 		int[] temp = new int[vocab.size()];
@@ -47,6 +47,7 @@ public class TrainVector {
 		for (int i = 0; i < vocab.size(); i++) {
 			vec.set(i, temp[i]);
 		}
+		System.out.println(vec);
 		return vec;
 	}
 
@@ -114,14 +115,16 @@ public class TrainVector {
 		p1 += Math.log(pAbusive);
 		p0 += Math.log(1 - pAbusive);
 		System.out.println("p0=" + p0 + "   p1=" + p1);
-		if (p0 > p1) {
+		if(p0 > -0.4 || p1>-1.4){
+			System.out.println("Neutral Words!");
+		}
+		else if (p1 > p0) {
 			System.out.println("Positive Words!");
 		}
-		else if(p1 > p0) {
+		else if(p0 > p1) {
 			System.out.println("Negative Words!");
 		} 
-		else
-			System.out.println("Neutral Words!");
+		
 	}
 
 	public int[] laplace(int[] s, int weight) {

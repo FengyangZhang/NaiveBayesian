@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bayesian {
+	/**
+	 * @param args
+	 */
 	public static void main(String args[]){
-		TrainData dataManager = new TrainData();//ÓÃ¸Ãµ¥Àý²Ù×ÝÑµÁ·¼¯
-		Vocabulary vocabulary = new Vocabulary();//²Ù×Ý´Ê»ã±í
-		TrainVector vectorManager = new TrainVector();//²Ù×ÝÏòÁ¿±í
-		//³õÊ¼»¯
+		TrainData dataManager = new TrainData();//ï¿½Ã¸Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½ï¿½ï¿½ï¿½
+		Vocabulary vocabulary = new Vocabulary();//ï¿½ï¿½ï¿½Ý´Ê»ï¿½ï¿½
+		TrainVector vectorManager = new TrainVector();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ï¿½ï¿½Ê¼ï¿½ï¿½
 		dataManager.init();
 		vocabulary.init(dataManager.getData());
 		vectorManager.init();
@@ -18,9 +21,9 @@ public class Bayesian {
 		vectorManager.train(dataManager.getDataClass());
 		List<String> test = new ArrayList<>();
 		List<Integer> testVec = new ArrayList<>();
-		test.add("");
-		test.add("asshole");
+		test.add("sad");
 		testVec = vectorManager.test2Vector(vocabulary.get(), test);
 		vectorManager.judge(testVec);
+		System.out.println(test);
 	}
 }
