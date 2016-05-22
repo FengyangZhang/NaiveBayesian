@@ -1,8 +1,13 @@
+/**
+ * created by John Frey@BUPT
+ * a ML component for an application
+ */
 package com.johnfrey.bupt;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -25,18 +30,18 @@ public class Bayesian {
         getTrainData();
         getVocab();
         writeDict();
-        data2Vector();
-        train();
-        writeFeature();
-        List<String> test = new ArrayList<>();
-        List<Integer> testVec = new ArrayList<>();
-        test.add("sad");
-//		test.add("my");
-//		test.add("friend");
-//		test.add("is");
-//		test.add("gone");
-        testVec = test2Vector(test);
-        judge(testVec);
+//        data2Vector();
+//        train();
+//        writeFeature();
+//        List<String> test = new ArrayList<>();
+//        List<Integer> testVec = new ArrayList<>();
+//        test.add("sad");
+//		  test.add("my");
+//		  test.add("friend");
+//		  test.add("is");
+//		  test.add("gone");
+//        testVec = test2Vector(test);
+//        judge(testVec);
     }
 
     //初始化
@@ -68,7 +73,7 @@ public class Bayesian {
             e.printStackTrace();
         }
         //如果字典还是空的，从训练文本生成训练集
-        File trainSet = new File("./data_test.txt");
+        File trainSet = new File("./data_formal.txt");
         try {
             FileInputStream in = new FileInputStream(trainSet);
             if (in != null) {
@@ -131,15 +136,33 @@ public class Bayesian {
         }
         //字典文件为空，从训练集生成字典
         else {
+            HashMap<String,Boolean> tempVoc = new HashMap<>();
+            //先筛掉一些频数仅仅为1的词，以免虚增字典大小
             for (List<String> data : trainData) {
                 for (String word : data) {
-                    //字典中不含这个词、词不为空值或其他空白字符，则加入字典
-                    if (!vocabulary.contains(word) && word != "" && word.length() != 0) {
-                        vocabulary.add(word);
-                        //TODO：去除训练集里频数为1的词
+                    if(tempVoc.containsKey(word)){
+                        tempVoc.put(word,true);
+                    }
+                    else{
+                        tempVoc.put(word,false);
                     }
                 }
             }
+            //将value=true（即不止一次出现）且符合筛选条件的词语放入字典
+            for(HashMap.Entry<String, Boolean> entry : tempVoc.entrySet()){
+                if(entry.getValue() &&
+                        entry.getKey().length() != 0 &&
+                        entry.getKey() != "" &&
+                        !entry.getKey().startsWith("@") &&
+                        !entry.getKey().startsWith("#") &&
+                        !entry.getKey().startsWith("&") &&
+                        !entry.getKey().startsWith("(") &&
+                        !entry.getKey().startsWith(")")){
+                    vocabulary.add(entry.getKey());
+                    System.out.println(entry.getKey());
+                }
+            }
+            System.out.println(vocabulary.size());
         }
     }
 
@@ -150,6 +173,7 @@ public class Bayesian {
         } else {
             List<Integer> vec;
             for (int j = 0; j < trainData.size(); j++) {
+                System.out.println(j);
                 List<Integer> temp = new ArrayList<>();
                 vec = temp;
                 for (int i = 0; i < vocabulary.size(); i++) {
