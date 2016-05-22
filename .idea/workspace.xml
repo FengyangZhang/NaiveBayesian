@@ -4,17 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/dict.txt" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfebb1b8-9026-4e58-b044-cb1f0bcf8633" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/johnfrey/bupt/Bayesian.class" afterPath="$PROJECT_DIR$/bin/com/johnfrey/bupt/Bayesian.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_temp.txt" afterPath="$PROJECT_DIR$/data_temp.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dict.txt" afterPath="$PROJECT_DIR$/dict.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p0Vec.txt" afterPath="$PROJECT_DIR$/p0Vec.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p1Vec.txt" afterPath="$PROJECT_DIR$/p1Vec.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pAbusive.txt" afterPath="$PROJECT_DIR$/pAbusive.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/johnfrey/bupt/Bayesian.java" afterPath="$PROJECT_DIR$/src/com/johnfrey/bupt/Bayesian.java" />
-    </list>
+    <list default="true" id="cfebb1b8-9026-4e58-b044-cb1f0bcf8633" name="Default" comment="" />
     <ignored path="NaiveBayesian.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -254,7 +244,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../onos" />
   </component>
   <component name="RunManager" selected="Application.Bayesian">
     <configuration default="false" name="Bayesian" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -629,7 +619,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3986014" sideWeight="0.50738394" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2951594" sideWeight="0.49261603" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2951594" sideWeight="0.49261603" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821724" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
