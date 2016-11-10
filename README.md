@@ -1,11 +1,6 @@
 # NaiveBayesian
 Naive Bayesian method for a simple Android app
----
-title: NaiveBayesian
-date: 2016-05-11 21:01:30
-tags: Technology
----
- An implementation of a simple machine learning algorithm--Naive Bayesian algorithm in order to judge if a given list of string is abusive or not.
+An implementation of a simple machine learning algorithm--Naive Bayesian algorithm in order to judge if a given list of string is abusive or not.
 <!-- more -->
 
 ## Usage:
