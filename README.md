@@ -29,8 +29,6 @@ We can get every *P* on the right side of the  equation from our training set,an
 
 ---
 ## Key points and codes:
-### Overview:
-![overview](/pic/2016-05-11-NaiveBayesian/overview.png)
 ### Train data to dictionary:
 ```java    
     for (List<String> data : trainData) {
